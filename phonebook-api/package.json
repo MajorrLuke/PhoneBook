@@ -1,0 +1,18 @@
+{
+  "name": "phonebook-api",
+  "version": "1.0.0",
+  "description": "Api para retornar clientes presentes na lista telefonica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MajorrLuke",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.5.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "prisma": "^5.5.2",
+    "sqlite3": "^5.1.6"
+  }
+}
