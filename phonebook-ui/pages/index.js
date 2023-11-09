@@ -44,7 +44,7 @@ const Home = () => {
       {selectedUser && (
           <div className="modal_div">
             <img src="images/excluir.png" onClick={closeModal}></img>
-            <h2>{selectedUser.userName}:</h2>
+            <h2>{selectedUser.userName}</h2>
             <table>
               <tbody>
                 <tr>
@@ -69,7 +69,7 @@ const Home = () => {
                 margin:24vh auto 0 35vw;
                 border: 1px solid black;
                 z-index: 101;
-                overflow: hidden;
+                overflow: auto;
                 background-color: white;
                 background-image: linear-gradient(to right, #00ffc8, #00e6b5, #00cda1, #00b58f, #019d7c);
                 padding-bottom: 2vh;

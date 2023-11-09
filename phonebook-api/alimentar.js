@@ -15,7 +15,7 @@ async function alimentar() {
     data: {
       name: 'Lucas Cornachioni',
       phoneNumbers: {
-        create: { number: '(34) 99682-2318' },
+        create: [{ number: '(34) 99682-2318'}, {number: '(34) 92222-2222' },],
       },
     },
   });
@@ -24,7 +24,7 @@ async function alimentar() {
     data: {
       name: 'Jéssica de Brito',
       phoneNumbers: {
-        create: { number: '(34) 99682-2318' },
+        create: [{ number: '(34) 99682-2318'}, {number: '(34) 92222-2222' }, {number: '(34) 92222-2222' }, {number: '(34) 92222-2222' }, {number: '(34) 92222-2222' }, {number: '(34) 92222-2222' }, {number: '(34) 92222-2222' }, {number: '(34) 92222-2222' },],
       },
     },
   });
@@ -33,6 +33,8 @@ async function alimentar() {
 
   await prisma.$disconnect();
 }
+
+
 
 alimentar().catch((e) => {
   throw e;

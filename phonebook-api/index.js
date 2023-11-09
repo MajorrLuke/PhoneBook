@@ -4,10 +4,10 @@ const app = express();
 const { PrismaClient } = require('./generated/client');
 const prisma = new PrismaClient();
 
-// Enable CORS for all routes
+// habilita CORS para utilização/teste em maquina local (localhost)
 app.use(cors());
 
-// Middleware for API_KEY authentication
+// Middleware para autenticação
 app.use((req, res, next) => {
   const apiKey = process.env.API_KEY;
   if (req.headers['api-key'] === apiKey) {
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   }
 });
 
-// GET endpoint to retrieve all users
+// Endpoint GET de retorno de todos os usuários
 app.get('/api/users', async (req, res) => {
   const users = await prisma.user.findMany({
     include: {
@@ -27,7 +27,7 @@ app.get('/api/users', async (req, res) => {
   res.json(users);
 });
 
-// GET endpoint to retrieve phone numbers for a specific user by ID
+// Endpoint GET de retorno de número de um usuário via ID
 app.get('/api/users/:userId/phone_numbers', async (req, res) => {
   const userId = parseInt(req.params.userId);
   const user = await prisma.user.findUnique({
