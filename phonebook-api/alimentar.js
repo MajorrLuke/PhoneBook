@@ -14,7 +14,7 @@ async function alimentar() {
   await prisma.user.create({
     data: {
       name: 'Lucas Cornachioni',
-      phoneNumbers: {
+      phoneNumbers:{
         create: [{ number: '(34) 99682-2318'}, {number: '(34) 92222-2222' },],
       },
     },
