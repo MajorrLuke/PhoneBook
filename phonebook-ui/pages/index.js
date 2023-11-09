@@ -63,7 +63,7 @@ const Home = () => {
             <style jsx>{`
         
               .modal_div{
-                position: absolute;
+                position: absolute; 
                 width:30vw;
                 max-height: 30vh;
                 margin:24vh auto 0 35vw;
