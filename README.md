@@ -14,3 +14,7 @@ Development was made on Windows, some steps and command syntaxes may differ.
 6. Navigate to "phonebook-ui" and Install the necessary dependencies with "npm install".
 7. Start the server with "npm run dev"
 8. The web interface can be accessed in port 8080.
+
+# Test
+
+You can seed the database with test data using the script located on "phonebook-api\alimentar.js"
